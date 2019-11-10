@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+.white-text{
+    color: white;
+}
+div.card{
+    background-color: rgb(48, 45, 45);
+}
+button{
+    margin: 10px
+}
