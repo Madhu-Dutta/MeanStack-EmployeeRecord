@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 //need to allow cors() to the port angular UI is running and pass the value as a json object
 app.use(cors({ origin: "http://localhost:4200" }));
 
-//Start and listen for the server to start in PORT 5000
-app.listen(5000, () => console.log("Server started at PORT : 5000"));
+//Start and listen for the server to start in PORT 3000
+app.listen(3000, () => console.log("Server started at PORT : 3000"));
 
 app.use("/employees", employeeController);

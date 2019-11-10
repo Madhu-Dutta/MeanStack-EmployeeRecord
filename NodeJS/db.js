@@ -1,21 +1,16 @@
 const mongoose = require("mongoose");
 
-mongoose.connect = async() => {
-  try{
-      await mongoose.connect(db, 
-          // Add the below objects are there to avoid mongoose depriction warnings
-          {useNewUrlParser: true,
-          useUnifiedTopology: true,
-          useCreateIndex: true,
-          useFindAndModify: false
-          }
-          );
-      console.log('Mondodb connected');
-  }
-  catch(err){
-      console.error(err);
-      //EXIT process with a failure
-      process.exit(1);
-  }
-};
+mongoose.connect("mongodb+srv://maddy:maddy1234@cluster0-1txv8.mongodb.net/test?retryWrites=true&w=majority",{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: true
+}, err => {
+    if(!err){
+        console.log("Mongodb connection succeeded");
+    }
+    else{
+        console.log("error in db connection: " + JSON.stringify(err, undefined, 2));
+    }
+});
+
 module.exports = mongoose;

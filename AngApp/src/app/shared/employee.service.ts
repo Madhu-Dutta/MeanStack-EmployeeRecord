@@ -17,7 +17,7 @@ export class EmployeeService {
   //employees to store data from mongodb
   employees: Employee[]; 
   //BaseUrl for fetching employee info from server
-  readonly baseUrl = "http://localhost:5000/employees"
+  readonly baseUrl = "http://localhost:3000/employees"
 
   //Inject HttpClient in the constructor to consume is service
   constructor(private http: HttpClient) { }
